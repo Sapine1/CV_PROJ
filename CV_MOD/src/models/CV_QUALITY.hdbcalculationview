@@ -10,17 +10,18 @@
 </dataSources>
 <calculationViews/>
 <logicalModel id="com.sap::QUALITY">
-  <attributes/>
+  <attributes>
+    <attribute id="CUSTOMER" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CUSTOMER"/>
+      <keyMapping columnObjectName="QUALITY" columnName="CUSTOMER"/>
+    </attribute>
+    <attribute id="MATERIAL_ID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MATERIAL_ID"/>
+      <keyMapping columnObjectName="QUALITY" columnName="MATERIAL_ID"/>
+    </attribute>
+  </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="CUSTOMER" order="1" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="CUSTOMER"/>
-      <measureMapping columnObjectName="QUALITY" columnName="CUSTOMER"/>
-    </measure>
-    <measure id="MATERIAL_ID" order="2" aggregationType="sum" measureType="simple">
-      <descriptions defaultDescription="MATERIAL_ID"/>
-      <measureMapping columnObjectName="QUALITY" columnName="MATERIAL_ID"/>
-    </measure>
     <measure id="PRICE" order="3" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="PRICE"/>
       <measureMapping columnObjectName="QUALITY" columnName="PRICE"/>
